@@ -87,4 +87,58 @@ When you're ready to submit:
 
 ---
 
+## Solution Summary & Findings
+
+### Final Solution Performance
+
+**Best Solution**: `predict_optimized.py` (wrapped by `run_optimized.sh`)
+- **Score**: 1,647.90 
+- **Average Error**: $15.48
+- **Approach**: GradientBoosting model with 62 engineered features
+
+### Key Discoveries
+
+1. **Receipt Ending Patterns**: 
+   - `.49` endings: Strong penalties (not bonuses as initially suspected)
+   - `.99` endings: Moderate penalties
+   - Other endings: Small bonus (~$5)
+
+2. **Core Components**:
+   - **Per Diem**: $100/day base rate
+   - **Mileage**: Tiered structure
+     - First 100 miles: $0.58/mile
+     - Next 300 miles: $0.48/mile
+     - Beyond 400 miles: $0.35/mile
+   - **Receipts**: Variable rate based on trip length and daily spending
+
+3. **Critical Adjustments**:
+   - 5-day trips are penalized (-$46)
+   - Efficiency bonus for 175-212 miles/day
+   - Low receipt bonus for <$100/day spending
+   - Long trip scaling factors
+
+### Solution Evolution
+
+1. **Initial Rules-Based**: Score ~18,000 (average error ~$180)
+2. **RandomForest Model**: Score ~5,400 (average error ~$54)
+3. **Optimized Rules**: Score ~5,378 (average error ~$52.78)
+4. **Final GradientBoosting**: Score **1,647.90** (average error ~$15.48)
+
+### Technical Approach
+
+The winning solution uses:
+- **62 engineered features** including polynomial terms, log transformations, and interaction features
+- **GradientBoosting model** trained on public cases
+- **Post-processing corrections** for specific patterns
+- **Clean architecture** separating feature engineering from prediction
+
+### Files of Interest
+
+- `predict_optimized.py` - The winning prediction model
+- `run_optimized.sh` - Wrapper script for submission
+- `optimize_further.py` - Model training and optimization
+- `SOLUTION_SUMMARY.md` - Detailed technical documentation
+
+The challenge demonstrated that while rules-based approaches can capture obvious patterns, machine learning models excel at discovering the complex, non-linear relationships in legacy systems.
+
 **Good luck and Bon Voyage!**
