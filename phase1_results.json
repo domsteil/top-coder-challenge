@@ -1,0 +1,98 @@
+{
+  "mae": 103.96715088953832,
+  "coefficients": [
+    {
+      "feature": "rounding_49_99_flag",
+      "coefficient": -472.7286491530448
+    },
+    {
+      "feature": "log_receipts",
+      "coefficient": -387.55715180069524
+    },
+    {
+      "feature": "extreme_receipts",
+      "coefficient": -139.32751550943547
+    },
+    {
+      "feature": "sqrt_receipts",
+      "coefficient": 111.9870020799274
+    },
+    {
+      "feature": "days",
+      "coefficient": 64.93689772594544
+    },
+    {
+      "feature": "is_medium_trip",
+      "coefficient": 62.89990006578032
+    },
+    {
+      "feature": "high_daily_spend",
+      "coefficient": -54.63579394172001
+    },
+    {
+      "feature": "is_long_trip",
+      "coefficient": -46.51913025559683
+    },
+    {
+      "feature": "is_five_day",
+      "coefficient": -46.23861774097107
+    },
+    {
+      "feature": "low_receipt_flag",
+      "coefficient": 44.516636758965966
+    },
+    {
+      "feature": "very_high_daily_spend",
+      "coefficient": 35.588078037815734
+    },
+    {
+      "feature": "efficiency_bonus_narrow",
+      "coefficient": -18.506757576514268
+    },
+    {
+      "feature": "is_short_trip",
+      "coefficient": -16.38076981018321
+    },
+    {
+      "feature": "efficiency_bonus",
+      "coefficient": 14.752512524123013
+    },
+    {
+      "feature": "high_spend_x_days",
+      "coefficient": -4.777472876041336
+    },
+    {
+      "feature": "tier1_miles",
+      "coefficient": 0.8242268844009282
+    },
+    {
+      "feature": "receipts",
+      "coefficient": -0.8008301293339564
+    },
+    {
+      "feature": "tier2_miles",
+      "coefficient": 0.4895767159391524
+    },
+    {
+      "feature": "tier3_miles",
+      "coefficient": 0.4336407723172415
+    },
+    {
+      "feature": "miles_per_day",
+      "coefficient": -0.1512595044664753
+    },
+    {
+      "feature": "five_day_x_receipts",
+      "coefficient": 0.028961818024332595
+    },
+    {
+      "feature": "days_x_receipts",
+      "coefficient": -0.013209588264454786
+    },
+    {
+      "feature": "receipts_per_day",
+      "coefficient": 0.009328287137928354
+    }
+  ],
+  "intercept": 711.3239370654089
+}
